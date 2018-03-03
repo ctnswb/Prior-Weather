@@ -1,27 +1,15 @@
 # PriorWeather
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
+This app gets prior 7 days of weather data for a user specified location.
 
-## Development server
+## Server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+npm start will build the bundle while starting server
 
-## Code scaffolding
+## APIs
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The app uses Dark Sky API to retrieve weather data and Google Maps Geocoding API to retrieve coordinates for an address/location.
 
-## Build
+## Use
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+When the user enters in a location in the search bar, the app will display basic past weather data for the last 7 days.
