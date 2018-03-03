@@ -1,0 +1,44 @@
+input {
+  /*height: 2em;*/
+  width: 50%;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.main-display {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 2fr;
+  height: 100%;
+}
+
+.input-display {
+  background: salmon;
+}
+
+.weather-display {
+  padding: 5px;
+}
+
+.viewing-text {
+  color: whitesmoke;
+  padding: 4px;
+}
+
+@media screen and (max-width:500px) {
+  input{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width:350px) {
+  input{
+    width: 60%;
+    font-size: 1em;
+    min-width: 200px;
+  }
+}

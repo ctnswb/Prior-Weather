@@ -1,0 +1,33 @@
+.app-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 2fr 0.25fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  height: 100vh;
+}
+
+.app-component {
+  height: 100%;
+}
+
+.header {
+  grid-area: header;
+  background: salmon;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.main {
+  grid-area: main;
+  background: whitesmoke;
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+
+}

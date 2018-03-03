@@ -1,0 +1,9 @@
+ <div class="main-display">
+  <div class="input-display">
+    <input type="text" placeholder="Enter a Location" (keyup.enter)="onInputLocation(locationInput)" #locationInput>
+    <div class="viewing-text" *ngIf="dataLocation">Viewing the weather for {{dataLocation}}</div>
+  </div>
+  <div class="weather-display">
+    <weather-card-list [weatherData]="weatherData"></weather-card-list>
+  </div>
+ </div>
