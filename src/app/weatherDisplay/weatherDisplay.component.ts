@@ -14,12 +14,14 @@ export class WeatherDisplayComponent {
   location : string;
   weatherData : Object[];
   dataLocation : string;
+  mapData;
 
   onInputLocation(locationInput: HTMLInputElement){
     this.location = locationInput.value;
     this.weatherDataService.getWeatherData(this.location).then((data)=> {
       this.weatherData = data.data[0];
       this.dataLocation = data.data[1];
+      this.mapData = [data.data[0][0].latitute, data.data[0].longitude];
     });
   }
 }

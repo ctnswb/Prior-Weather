@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { WeatherDisplayComponent } from './weatherDisplay/weatherDisplay.component';
 import { WeatherCardListComponent } from './weatherDisplay/weatherCardList/weatherCardList.component';
 import { WeatherCardComponent } from './weatherDisplay/weatherCardList/weatherCard/weatherCard.component';
+import { MapComponent } from './weatherDisplay/map/map.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { WeatherCardComponent } from './weatherDisplay/weatherCardList/weatherCa
     AppComponent,
     WeatherDisplayComponent,
     WeatherCardListComponent,
-    WeatherCardComponent
+    WeatherCardComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule

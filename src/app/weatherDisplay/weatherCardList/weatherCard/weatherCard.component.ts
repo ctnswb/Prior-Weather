@@ -21,9 +21,22 @@ export class WeatherCardComponent implements OnChanges{
     this.info = this.weather.daily.data[0];
     this.summary= this.info.summary;
     this.day = new Date(this.info.time * 1000).toDateString().substring(0,11);
-    this.tempHigh = this.info.temperatureHigh;
-    this.tempLow = this.info.temperatureLow;
+
+    if (window.navigator.language !==  "en-US") {
+      this.tempHigh = this.convertToCelcius(this.info.temperatureHigh);
+      this.tempLow = this.convertToCelcius(this.info.temperatureLow);
+    } else {
+      this.tempHigh = this.info.temperatureHigh + 'F';
+      this.tempLow = this.info.temperatureLow + 'F';
+    }
     this.icon = this.info.icon;
+
+  }
+
+  convertToCelcius(temperature) {
+    let celcius = "";
+    celcius += (temperature - 32) * 5 / 9;
+    return celcius.split('.')[0] + 'C';
   }
 
 }
