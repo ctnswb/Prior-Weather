@@ -25,6 +25,10 @@ app.get('/sky', (req, res) => {
   });
 })
 
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 })
+
+app.get('*', (req,res) =>{
+  res.sendFile(path.resolve(__dirname, 'dist/index.html'))
+});
