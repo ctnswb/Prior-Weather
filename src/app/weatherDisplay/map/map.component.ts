@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import {} from '@types/googlemaps';
 
 @Component({
@@ -9,7 +9,6 @@ import {} from '@types/googlemaps';
 
 export class MapComponent implements OnChanges {
   @Input() coordinates;
-  @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
   marker: google.maps.Marker;
 
