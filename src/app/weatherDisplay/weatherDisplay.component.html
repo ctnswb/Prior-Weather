@@ -4,8 +4,8 @@
     <div class="viewing-text" *ngIf="dataLocation">Viewing the weather for {{dataLocation}}</div>
   </div>
   <div class="weather-display">
+  <map *ngIf="dataLocation" [coordinates]="mapData"></map>
     <weather-card-list [weatherData]="weatherData"></weather-card-list>
 
   </div>
-  <map [mapData]="mapData"></map>
  </div>

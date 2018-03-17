@@ -21,7 +21,7 @@ export class WeatherDisplayComponent {
     this.weatherDataService.getWeatherData(this.location).then((data)=> {
       this.weatherData = data.data[0];
       this.dataLocation = data.data[1];
-      this.mapData = [data.data[0][0].latitute, data.data[0].longitude];
+      this.mapData = data.data[0][0];
     });
   }
 }
